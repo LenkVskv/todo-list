@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <script src="form.js"></script>
+
+  <title>todo-list</title>
+</head>
+<body>
+<header class="head">
+  <h2>TODOList</h2>
+</header>
+<main>
+  <div class="wrapper">
+   <input type="search" id="search" class="search" name="search"  placeholder="search by title">
+   <select id="status-selector" class="option">
+     <option value="none" selected disabled hidden>all</option>
+     <option value="open">open</option>
+     <option value="done">done</option>
+   </select>
+   <select id="priority-selector" class="priority">
+     <option value="none" selected disabled hidden>all</option>
+     <option>high</option>
+     <option>normal</option>
+     <option>low</option>
+   </select>
+   <input type="button" class="create" id="create" name="create" value="Create ">
+    <div id="data_info">
+      <div class="tasks">
+
+      </div>
+    </div>
+  </div>
+  <div id="create-modal" class="modal">
+   <div class="modal-content">
+      <span class="close">&times;</span>
+      <form action="" id="form" >
+          <label for title="title" >Title:</label>
+          <p><input type="text" id="title"></p>
+          <label for="description">Description:</label>
+          <p><textarea id="description" placeholder="Description" ></textarea></p>
+          <label for="priority">Priority:</label>
+          <p><select class="form_priority" id="priority">
+            <option>high</option>
+            <option>normal</option>
+            <option>low</option>
+          </select></p>
+          <span class="form_btn">
+          <input type="button"class="cancel" name="cancel" value="Cancel ">
+          <input type="button"class="save" name="save" value="Save">
+          </span>
+       </form>
+    </div>
+  </div>
+    <div id="edit-modal" class="edit modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form action="" id="form2" >
+                <label for title="title" >Title:</label>
+                <p><input type="text" id="title2"></p>
+                <label for="description">Description:</label>
+                <p><textarea id="description2" placeholder="Description" ></textarea></p>
+                <label for="priority">Priority:</label>
+                <p><select class="form_priority" id="priority2">
+                    <option>high</option>
+                    <option>normal</option>
+                    <option>low</option>
+                </select></p>
+                <span class="form_btn">
+          <input type="button" class="cancel" name="cancel" value="Cancel ">
+          <input type="button" class="save" name="save" value="Save">
+          </span>
+            </form>
+        </div>
+    </div>
+
+</main>
+<footer class="foot">
+  <h3>Olena Vaskiv</h3>
+</footer>
+</body>
+</html>
